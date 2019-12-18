@@ -16,20 +16,18 @@ public class Trilateration
         double x = (C * E - F * B) / (E * A - B * D);
         double y = (C * D - A * F) / (B * D - A * E);
 
-        Trilateration tri = new Trilateration();
-        tri.x = x;
-        tri.y = y;
-        return tri;
+        this.x = x;
+        this.y = y;
+        return this;
     }
 }
 
 public class Program
 {
-
     public static void Main(string[] args)
     {
-        Trilateration trilateration = new Trilateration();
-        Trilateration result = trilateration.calculateLocation(-84, 44, 92.1791733528, 98, 64, 171.011695506, 116, -108, 171.39719951);
-        Console.WriteLine("X: {0} Y: {1}", result.x, result.y);
+        Trilateration tri = new Trilateration();
+        tri.calculateLocation(-84, 44, 92.1791733528, 98, 64, 171.011695506, 116, -108, 171.39719951);
+        Console.WriteLine("X: {0} Y: {1}", tri.x, tri.y);
     }
 }
