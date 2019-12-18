@@ -6,7 +6,6 @@ public class Trilateration
 
     public Trilateration calculateLocation(double x1, double y1, double r1, double x2, double y2, double r2, double x3, double y3, double r3)
     {
-        //var coordinates = new { x, y };
         double A = 2 * x2 - 2 * x1;
         double B = 2 * y2 - 2 * y1;
         double C = Math.Pow(r1, 2) - Math.Pow(r2, 2) - Math.Pow(x1, 2) + Math.Pow(x2, 2) - Math.Pow(y1, 2) + Math.Pow(y2, 2);
